@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(vendor/bin/pint --dirty --format agent tests/Feature/Auth/AuthTest.php tests/Feature/Availability/AvailabilityTest.php tests/Feature/Booking/BookingTest.php tests/Unit/BookingServiceTest.php)",
+      "Bash(php artisan:*)",
+      "Bash(vendor/bin/pint --dirty --format agent tests/Feature/Auth/AuthTest.php)"
+    ]
+  }
+}
