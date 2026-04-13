@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="frontend/public/brand/bookit_logo_transparent_dark.svg" alt="BookIT" height="48"/>
+  <img src="frontend/public/brand/bookit_logo_transparent_light.svg" alt="BookIT" height="48"/>
   <br/>
   <br/>
   <p>A full-stack B2B appointment booking system built with Laravel and Next.js.</p>
