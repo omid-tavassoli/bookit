@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="54" viewBox="0 0 240 54" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="9" width="38" height="36" rx="7" fill="none" stroke="#1A3A5C" stroke-width="3"/>
+  <rect x="2" y="19" width="38" height="3" fill="#1A3A5C"/>
+  <rect x="11" y="5" width="5" height="10" rx="2.5" fill="#1A3A5C"/>
+  <rect x="26" y="5" width="5" height="10" rx="2.5" fill="#1A3A5C"/>
+  <polyline points="13,33 19,39 31,25" fill="none" stroke="#1A3A5C" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="54" y="40" font-family="Georgia, serif" font-size="34" font-weight="900" fill="#1A1040" letter-spacing="-1">BOOK</text>
+  <text x="175" y="40" font-family="'Rockwell', 'Courier New', serif" font-size="36" font-weight="900" fill="#2563EB" letter-spacing="3">IT</text>
+</svg>
