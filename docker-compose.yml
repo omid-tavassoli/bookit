@@ -1,0 +1,68 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: bookit_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: bookit
+      POSTGRES_USER: bookit
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - bookit_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: bookit_redis
+    restart: unless-stopped
+    networks:
+      - bookit_network
+
+  app:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: bookit_app
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - redis
+    env_file: ./backend/.env.production
+    ports:
+      - "8000:8000"
+    networks:
+      - bookit_network
+
+  worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: bookit_worker
+    restart: unless-stopped
+    command: php artisan queue:work redis --sleep=3 --tries=3 --max-time=3600
+    depends_on:
+      - postgres
+      - redis
+    env_file: ./backend/.env.production
+    networks:
+      - bookit_network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: bookit_frontend
+    restart: unless-stopped
+    env_file: ./frontend/.env.production
+    ports:
+      - "3000:3000"
+    networks:
+      - bookit_network
+
+networks:
+  bookit_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
