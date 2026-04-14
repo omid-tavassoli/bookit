@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import { Calendar, dateFnsLocalizer, View } from 'react-big-calendar'
 import { format, parse, startOfWeek, getDay } from 'date-fns'
 import { enUS } from 'date-fns/locale'
@@ -28,8 +28,20 @@ interface Props {
 }
 
 export default function BookingCalendar({ bookings, onSelectBooking }: Props) {
+  const [isMobile, setIsMobile] = useState(false)
   const [currentDate, setCurrentDate] = useState(new Date())
   const [currentView, setCurrentView] = useState<View>('month')
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 767px)')
+    const update = (e: MediaQueryListEvent | MediaQueryList) => {
+      setIsMobile(e.matches)
+      setCurrentView(e.matches ? 'agenda' : 'month')
+    }
+    update(mq)
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
 
   const events = useMemo(() => bookings.map(booking => {
     const dateOnly = booking.booking_date.slice(0, 10)
@@ -64,7 +76,7 @@ export default function BookingCalendar({ bookings, onSelectBooking }: Props) {
         endAccessor="end"
         eventPropGetter={eventStyleGetter}
         onSelectEvent={event => onSelectBooking(event.resource)}
-        views={['month', 'week']}
+        views={isMobile ? ['day', 'agenda'] : ['month', 'week']}
         view={currentView}
         onView={view => setCurrentView(view)}
         date={currentDate}

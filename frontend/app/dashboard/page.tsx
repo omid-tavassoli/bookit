@@ -144,20 +144,22 @@ return (
 
       {/* Filter tabs — only show in list view */}
       {view === 'list' && (
-        <div className="flex gap-1 mb-6 bg-white rounded-lg border p-1 w-fit">
-          {filterTabs.map(tab => (
-            <button
-              key={tab.key}
-              onClick={() => setFilter(tab.key)}
-              className={`px-4 py-1.5 rounded-md text-sm font-medium transition ${
-                filter === tab.key
-                  ? 'bg-[#000dff] text-white'
-                  : 'text-gray-600 hover:bg-gray-100'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
+        <div className="overflow-x-auto mb-6">
+          <div className="flex gap-1 bg-white rounded-lg border p-1 w-fit">
+            {filterTabs.map(tab => (
+              <button
+                key={tab.key}
+                onClick={() => setFilter(tab.key)}
+                className={`px-4 py-1.5 rounded-md text-sm font-medium transition whitespace-nowrap ${
+                  filter === tab.key
+                    ? 'bg-[#000dff] text-white'
+                    : 'text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
         </div>
       )}
 

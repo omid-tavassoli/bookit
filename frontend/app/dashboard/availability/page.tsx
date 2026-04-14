@@ -104,12 +104,12 @@ export default function AvailabilityPage() {
         {rules.map((rule, idx) => (
           <div
             key={rule.day_of_week}
-            className={`flex items-center gap-4 px-5 py-4 ${
+            className={`flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 px-5 py-4 ${
               idx < rules.length - 1 ? 'border-b' : ''
             } ${!rule.is_active ? 'opacity-50' : ''}`}
           >
             {/* Toggle */}
-            <label className="flex items-center gap-2 cursor-pointer min-w-[120px]">
+            <label className="flex items-center gap-2 cursor-pointer sm:min-w-30">
               <input
                 type="checkbox"
                 checked={rule.is_active}

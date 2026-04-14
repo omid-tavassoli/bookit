@@ -4,10 +4,10 @@ import SlugSearch from '@/components/SlugSearch'
 
 export default function LandingPage() {
   return (
-    <div style={{ fontFamily: 'Arial, Helvetica, sans-serif', background: '#fff', color: '#1a1040' }}>
+    <div className="font-sans bg-white text-[#1a1040]">
 
       {/* NAV */}
-      <nav style={{ background: '#1a1040', padding: '0 48px', height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <nav className="bg-[#1a1040] px-6 md:px-12 h-16 flex items-center justify-between">
         <div>
           <Link href="/">
             <Image
@@ -19,17 +19,17 @@ export default function LandingPage() {
             />
           </Link>
         </div>
-        <div style={{ display: 'flex', gap: '28px', alignItems: 'center' }}>
-          <a href="#features" style={{ fontSize: '14px', color: '#afa8ba', textDecoration: 'none' }}>Features</a>
-          <a href="#for-whom" style={{ fontSize: '14px', color: '#afa8ba', textDecoration: 'none' }}>For businesses</a>
-          <a href="#how" style={{ fontSize: '14px', color: '#afa8ba', textDecoration: 'none' }}>How it works</a>
+        <div className="flex items-center gap-4 md:gap-7">
+          <a href="#features" className="hidden md:block text-sm text-[#afa8ba] no-underline">Features</a>
+          <a href="#for-whom" className="hidden md:block text-sm text-[#afa8ba] no-underline">For businesses</a>
+          <a href="#how" className="hidden md:block text-sm text-[#afa8ba] no-underline">How it works</a>
           <Link href="/login">
-            <button style={{ background: 'transparent', color: '#fff', border: '1.5px solid rgba(255,255,255,0.35)', borderRadius: '8px', padding: '7px 18px', fontSize: '14px', fontWeight: 600, cursor: 'pointer', marginRight: '8px' }}>
+            <button className="bg-transparent text-white border border-white/35 rounded-lg px-4 py-1.5 text-sm font-semibold cursor-pointer mr-1">
               Log in
             </button>
           </Link>
           <Link href="/register">
-            <button style={{ background: '#000dff', color: '#fff', border: 'none', borderRadius: '8px', padding: '8px 18px', fontSize: '14px', fontWeight: 600, cursor: 'pointer' }}>
+            <button className="bg-[#000dff] text-white border-none rounded-lg px-4 py-2 text-sm font-semibold cursor-pointer">
               Register
             </button>
           </Link>
@@ -37,34 +37,33 @@ export default function LandingPage() {
       </nav>
 
       {/* HERO */}
-      <section style={{ background: '#f7f6ff', padding: '88px 48px 72px', textAlign: 'center' }}>
-        <div style={{ display: 'inline-block', background: '#eeeeff', color: '#000dff', fontSize: '12px', fontWeight: 700, padding: '4px 14px', borderRadius: '20px', marginBottom: '22px', letterSpacing: '.05em' }}>
+      <section className="bg-[#f7f6ff] px-6 md:px-12 pt-16 pb-14 md:pt-[88px] md:pb-[72px] text-center">
+        <div className="inline-block bg-[#eeeeff] text-[#000dff] text-xs font-bold px-3.5 py-1 rounded-full mb-6 tracking-wider">
           Online appointment booking
         </div>
-        <h1 style={{ fontSize: '50px', fontWeight: 900, lineHeight: 1.12, color: '#1a1040', maxWidth: '680px', margin: '0 auto 20px', fontFamily: 'Georgia, serif' }}>
+        <h1 className="text-4xl md:text-[50px] font-black leading-tight text-[#1a1040] max-w-[680px] mx-auto mb-5 font-serif">
           The smarter way to manage{' '}
-          <span style={{ color: '#000dff' }}>your bookings</span>
+          <span className="text-[#000dff]">your bookings</span>
         </h1>
-        <p style={{ fontSize: '17px', color: '#4a4453', maxWidth: '500px', margin: '0 auto 36px', lineHeight: 1.65 }}>
+        <p className="text-[17px] text-[#4a4453] max-w-[500px] mx-auto mb-9 leading-relaxed">
           BookIT gives businesses a beautiful booking page, a powerful dashboard, and a staff permission system — all in one place.
         </p>
 
-        {/* Business search */}
         <SlugSearch />
 
-        <p style={{ fontSize: '13px', color: '#afa8ba', marginBottom: '40px' }}>
+        <p className="text-[13px] text-[#afa8ba] mb-10">
           Have a booking link? Enter the business slug above — e.g.{' '}
-          <span style={{ color: '#000dff', fontWeight: 600 }}>test-physio</span>
+          <span className="text-[#000dff] font-semibold">test-physio</span>
         </p>
 
-        <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
+        <div className="flex gap-3 justify-center flex-wrap">
           <Link href="/register">
-            <button style={{ background: '#000dff', color: '#fff', border: 'none', borderRadius: '10px', padding: '13px 28px', fontSize: '15px', fontWeight: 700, cursor: 'pointer' }}>
+            <button className="bg-[#000dff] text-white border-none rounded-[10px] px-7 py-3 text-[15px] font-bold cursor-pointer">
               Get started free
             </button>
           </Link>
           <Link href="/login">
-            <button style={{ background: 'transparent', color: '#000dff', border: '1.5px solid #000dff', borderRadius: '10px', padding: '12px 28px', fontSize: '15px', fontWeight: 600, cursor: 'pointer' }}>
+            <button className="bg-transparent text-[#000dff] border border-[#000dff] rounded-[10px] px-7 py-3 text-[15px] font-semibold cursor-pointer">
               Log in
             </button>
           </Link>
@@ -72,23 +71,23 @@ export default function LandingPage() {
       </section>
 
       {/* SCREENSHOTS */}
-      <section style={{ background: '#fff', padding: '72px 48px' }}>
-        <h2 style={{ fontSize: '30px', fontWeight: 800, textAlign: 'center', color: '#1a1040', marginBottom: '8px', fontFamily: 'Georgia, serif' }}>
+      <section className="bg-white px-6 md:px-12 py-16 md:py-[72px]">
+        <h2 className="text-[30px] font-extrabold text-center text-[#1a1040] mb-2 font-serif">
           Everything your business needs
         </h2>
-        <p style={{ textAlign: 'center', color: '#4a4453', fontSize: '15px', marginBottom: '44px' }}>
+        <p className="text-center text-[#4a4453] text-[15px] mb-11">
           From public booking pages to a full management dashboard — BookIT has it all.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', maxWidth: '880px', margin: '0 auto' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-[880px] mx-auto">
           {[
             { label: 'Public booking page — clients book in seconds', content: <BookingPagePreview /> },
             { label: 'Owner dashboard — manage all bookings', content: <DashboardPreview /> },
             { label: 'Granular staff permissions — control who does what', content: <StaffPreview /> },
             { label: 'Weekly availability — set your hours once', content: <AvailabilityPreview /> },
           ].map((item, i) => (
-            <div key={i} style={{ border: '1.5px solid #e5e3ea', borderRadius: '14px', overflow: 'hidden' }}>
+            <div key={i} className="border border-[#e5e3ea] rounded-2xl overflow-hidden">
               {item.content}
-              <div style={{ padding: '12px 16px', fontSize: '13px', fontWeight: 600, color: '#4a4453', background: '#fafafa', borderTop: '1px solid #e5e3ea' }}>
+              <div className="px-4 py-3 text-[13px] font-semibold text-[#4a4453] bg-[#fafafa] border-t border-[#e5e3ea]">
                 {item.label}
               </div>
             </div>
@@ -97,14 +96,14 @@ export default function LandingPage() {
       </section>
 
       {/* FOR WHOM */}
-      <section id="for-whom" style={{ background: '#f7f6ff', padding: '72px 48px' }}>
-        <h2 style={{ fontSize: '30px', fontWeight: 800, textAlign: 'center', color: '#1a1040', marginBottom: '8px', fontFamily: 'Georgia, serif' }}>
+      <section id="for-whom" className="bg-[#f7f6ff] px-6 md:px-12 py-16 md:py-[72px]">
+        <h2 className="text-[30px] font-extrabold text-center text-[#1a1040] mb-2 font-serif">
           Built for service businesses
         </h2>
-        <p style={{ textAlign: 'center', color: '#4a4453', fontSize: '15px', marginBottom: '44px' }}>
+        <p className="text-center text-[#4a4453] text-[15px] mb-11">
           If clients book time with you, BookIT is for you.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '20px', maxWidth: '860px', margin: '0 auto' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-[860px] mx-auto">
           {[
             {
               icon: <path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2zM2 20c0-4 4-7 10-7s10 3 10 7"/>,
@@ -122,56 +121,56 @@ export default function LandingPage() {
               desc: 'Salons, barbers, studios — manage a full team with granular staff permissions.',
             },
           ].map((card, i) => (
-            <div key={i} style={{ background: '#fff', border: '1.5px solid #e5e3ea', borderRadius: '14px', padding: '28px 22px' }}>
-              <div style={{ width: '44px', height: '44px', background: '#eeeeff', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '14px' }}>
+            <div key={i} className="bg-white border border-[#e5e3ea] rounded-2xl p-7">
+              <div className="w-11 h-11 bg-[#eeeeff] rounded-[10px] flex items-center justify-center mb-3.5">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#000dff" strokeWidth="2" width="22" height="22">
                   {card.icon}
                 </svg>
               </div>
-              <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#1a1040', marginBottom: '8px' }}>{card.title}</h3>
-              <p style={{ fontSize: '13px', color: '#4a4453', lineHeight: 1.6 }}>{card.desc}</p>
+              <h3 className="text-base font-bold text-[#1a1040] mb-2">{card.title}</h3>
+              <p className="text-[13px] text-[#4a4453] leading-relaxed">{card.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* HOW IT WORKS */}
-      <section id="how" style={{ background: '#fff', padding: '72px 48px' }}>
-        <h2 style={{ fontSize: '30px', fontWeight: 800, textAlign: 'center', color: '#1a1040', marginBottom: '8px', fontFamily: 'Georgia, serif' }}>
+      <section id="how" className="bg-white px-6 md:px-12 py-16 md:py-[72px]">
+        <h2 className="text-[30px] font-extrabold text-center text-[#1a1040] mb-2 font-serif">
           Up and running in minutes
         </h2>
-        <p style={{ textAlign: 'center', color: '#4a4453', fontSize: '15px', marginBottom: '52px' }}>
+        <p className="text-center text-[#4a4453] text-[15px] mb-12">
           Three steps from signup to your first booking.
         </p>
-        <div style={{ display: 'flex', maxWidth: '780px', margin: '0 auto' }}>
+        <div className="flex flex-col sm:flex-row max-w-[780px] mx-auto gap-8 sm:gap-0">
           {[
             { n: '1', title: 'Create your business', desc: 'Sign up, name your business, get your booking URL instantly.', line: true },
             { n: '2', title: 'Set your hours', desc: 'Configure weekly availability. BookIT handles the rest automatically.', line: true },
             { n: '3', title: 'Share your link', desc: 'Send clients to your booking page. Manage everything from the dashboard.', line: false },
           ].map((step) => (
-            <div key={step.n} style={{ flex: 1, textAlign: 'center', padding: '0 16px', position: 'relative' }}>
-              <div style={{ width: '44px', height: '44px', background: '#000dff', color: '#fff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px', fontWeight: 800, margin: '0 auto 16px', position: 'relative', zIndex: 1 }}>
+            <div key={step.n} className="flex-1 text-center px-4 relative">
+              <div className="w-11 h-11 bg-[#000dff] text-white rounded-full flex items-center justify-center text-lg font-black mx-auto mb-4 relative z-10">
                 {step.n}
               </div>
               {step.line && (
-                <div style={{ position: 'absolute', top: '22px', left: '50%', right: '-50%', height: '2px', background: '#e5e3ea', zIndex: 0 }} />
+                <div className="hidden sm:block absolute top-[22px] left-1/2 right-[-50%] h-0.5 bg-[#e5e3ea] z-0" />
               )}
-              <h4 style={{ fontSize: '15px', fontWeight: 700, color: '#1a1040', marginBottom: '6px' }}>{step.title}</h4>
-              <p style={{ fontSize: '13px', color: '#4a4453', lineHeight: 1.5 }}>{step.desc}</p>
+              <h4 className="text-[15px] font-bold text-[#1a1040] mb-1.5">{step.title}</h4>
+              <p className="text-[13px] text-[#4a4453] leading-snug">{step.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* FEATURES */}
-      <section id="features" style={{ background: '#f7f6ff', padding: '72px 48px' }}>
-        <h2 style={{ fontSize: '30px', fontWeight: 800, textAlign: 'center', color: '#1a1040', marginBottom: '8px', fontFamily: 'Georgia, serif' }}>
+      <section id="features" className="bg-[#f7f6ff] px-6 md:px-12 py-16 md:py-[72px]">
+        <h2 className="text-[30px] font-extrabold text-center text-[#1a1040] mb-2 font-serif">
           Powerful under the hood
         </h2>
-        <p style={{ textAlign: 'center', color: '#4a4453', fontSize: '15px', marginBottom: '44px' }}>
+        <p className="text-center text-[#4a4453] text-[15px] mb-11">
           Built with technology that scales with your business.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '20px', maxWidth: '860px', margin: '0 auto' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[860px] mx-auto">
           {[
             { title: 'Conflict-free scheduling', desc: 'PostgreSQL advisory locks ensure two clients can never book the same slot — even under high load.' },
             { title: 'Staff permission system', desc: 'Granular per-staff permissions. Control exactly who can confirm, cancel, or reschedule.' },
@@ -180,31 +179,31 @@ export default function LandingPage() {
             { title: 'Availability overrides', desc: 'Going on holiday? Mark specific dates as closed without touching your weekly schedule.' },
             { title: 'No account needed to book', desc: 'Clients book with just a name and email. No signup friction, higher conversion.' },
           ].map((f, i) => (
-            <div key={i} style={{ background: '#fff', borderRadius: '14px', padding: '24px 20px', border: '1.5px solid #e5e3ea' }}>
-              <div style={{ width: '10px', height: '10px', background: '#000dff', borderRadius: '50%', marginBottom: '12px' }} />
-              <h3 style={{ fontSize: '15px', fontWeight: 700, color: '#1a1040', marginBottom: '6px' }}>{f.title}</h3>
-              <p style={{ fontSize: '13px', color: '#4a4453', lineHeight: 1.55 }}>{f.desc}</p>
+            <div key={i} className="bg-white rounded-2xl p-6 border border-[#e5e3ea]">
+              <div className="w-2.5 h-2.5 bg-[#000dff] rounded-full mb-3" />
+              <h3 className="text-[15px] font-bold text-[#1a1040] mb-1.5">{f.title}</h3>
+              <p className="text-[13px] text-[#4a4453] leading-snug">{f.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* CTA */}
-      <section style={{ background: '#000dff', padding: '72px 48px', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '34px', fontWeight: 900, color: '#fff', marginBottom: '14px', fontFamily: 'Georgia, serif' }}>
+      <section className="bg-[#000dff] px-6 md:px-12 py-16 md:py-[72px] text-center">
+        <h2 className="text-[34px] font-black text-white mb-3.5 font-serif">
           Ready to take back your schedule?
         </h2>
-        <p style={{ color: '#b3b8ff', fontSize: '16px', marginBottom: '32px' }}>
+        <p className="text-[#b3b8ff] text-base mb-8">
           Join businesses already using BookIT to manage their appointments.
         </p>
-        <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
+        <div className="flex gap-3 justify-center flex-wrap">
           <Link href="/register">
-            <button style={{ background: '#fff', color: '#000dff', border: 'none', borderRadius: '10px', padding: '13px 28px', fontSize: '15px', fontWeight: 700, cursor: 'pointer' }}>
+            <button className="bg-white text-[#000dff] border-none rounded-[10px] px-7 py-3 text-[15px] font-bold cursor-pointer">
               Start for free
             </button>
           </Link>
           <Link href="/login">
-            <button style={{ background: 'transparent', color: '#fff', border: '2px solid rgba(255,255,255,0.45)', borderRadius: '10px', padding: '12px 28px', fontSize: '15px', fontWeight: 600, cursor: 'pointer' }}>
+            <button className="bg-transparent text-white border-2 border-white/45 rounded-[10px] px-7 py-3 text-[15px] font-semibold cursor-pointer">
               Log in
             </button>
           </Link>
@@ -212,16 +211,16 @@ export default function LandingPage() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ background: '#1a1040', padding: '56px 48px 32px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: '40px', marginBottom: '48px' }}>
-          <div>
+      <footer className="bg-[#1a1040] px-6 md:px-12 pt-14 pb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 mb-12">
+          <div className="col-span-2 md:col-span-1">
             <Image
               src="/brand/bookit_logo_transparent_light.svg"
               alt="BookIT"
               width={110}
               height={26}
             />
-            <p style={{ fontSize: '13px', color: '#afa8ba', lineHeight: 1.7, marginTop: '12px', maxWidth: '240px' }}>
+            <p className="text-[13px] text-[#afa8ba] leading-relaxed mt-3 max-w-[240px]">
               A modern appointment booking system for service businesses. Built with Laravel and Next.js.
             </p>
           </div>
@@ -231,23 +230,23 @@ export default function LandingPage() {
             { title: 'Account', links: ['Log in', 'Register', 'Get a demo'] },
           ].map((col) => (
             <div key={col.title}>
-              <h4 style={{ fontSize: '12px', fontWeight: 700, color: '#fff', marginBottom: '16px', letterSpacing: '.06em', textTransform: 'uppercase' }}>
+              <h4 className="text-xs font-bold text-white mb-4 tracking-widest uppercase">
                 {col.title}
               </h4>
               {col.links.map((link) => (
                 <a key={link} href={link === 'Log in' ? '/login' : link === 'Register' ? '/register' : '#'}
-                  style={{ display: 'block', fontSize: '13px', color: '#afa8ba', textDecoration: 'none', marginBottom: '10px' }}>
+                  className="block text-[13px] text-[#afa8ba] no-underline mb-2.5">
                   {link}
                 </a>
               ))}
             </div>
           ))}
         </div>
-        <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <p style={{ fontSize: '12px', color: '#afa8ba' }}>© 2026 BookIT. All rights reserved.</p>
-          <div style={{ display: 'flex', gap: '16px' }}>
+        <div className="border-t border-white/[0.08] pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+          <p className="text-xs text-[#afa8ba]">© 2026 BookIT. All rights reserved.</p>
+          <div className="flex gap-4">
             {['GitHub', 'LinkedIn', 'Twitter'].map(s => (
-              <a key={s} href="#" style={{ fontSize: '12px', color: '#afa8ba', textDecoration: 'none' }}>{s}</a>
+              <a key={s} href="#" className="text-xs text-[#afa8ba] no-underline">{s}</a>
             ))}
           </div>
         </div>
@@ -258,33 +257,6 @@ export default function LandingPage() {
 }
 
 // ── Sub-components ─────────────────────────────────────────────────
-
-// function SlugSearch() {
-//   'use client'
-//   return (
-//     <form
-//       onSubmit={(e) => {
-//         e.preventDefault()
-//         const input = (e.currentTarget.elements.namedItem('slug') as HTMLInputElement).value.trim()
-//         if (input) window.location.href = `/book/${input}`
-//       }}
-//       style={{ background: '#fff', border: '2px solid #000dff', borderRadius: '12px', padding: '6px 6px 6px 20px', display: 'flex', alignItems: 'center', maxWidth: '460px', margin: '0 auto 12px' }}
-//     >
-//       <input
-//         name="slug"
-//         type="text"
-//         placeholder="Enter business name, e.g. dr-muller-physio"
-//         style={{ border: 'none', outline: 'none', fontSize: '15px', flex: 1, color: '#1a1040', background: 'transparent' }}
-//       />
-//       <button
-//         type="submit"
-//         style={{ background: '#000dff', color: '#fff', border: 'none', borderRadius: '8px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer' }}
-//       >
-//         Book now
-//       </button>
-//     </form>
-//   )
-// }
 
 function BookingPagePreview() {
   return (
