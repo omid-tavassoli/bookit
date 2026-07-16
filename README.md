@@ -76,48 +76,6 @@ Controllers are thin HTTP handlers — all business logic lives in the service l
 
 ---
 
-## Local setup
-
-### Prerequisites
-
-- PHP 8.3, Composer
-- Node.js 20+, npm
-- PostgreSQL 16
-- Redis
-- Mailpit (local email testing — `brew install mailpit`)
-
-### Backend
-
-```bash
-cd backend
-cp .env.example .env
-composer install
-php artisan key:generate
-php artisan migrate
-php artisan serve
-```
-
-### Queue worker (separate terminal)
-
-```bash
-cd backend
-php artisan queue:work
-```
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-cp .env.local.example .env.local
-# Set NEXT_PUBLIC_API_URL=http://127.0.0.1:8000/api
-npm run dev
-```
-
-Open `http://localhost:3000` — the landing page loads. Register as an owner to access the dashboard. Visit `http://localhost:3000/book/{your-slug}` to see the public booking page.
-
----
-
 ## API overview
 
 Protected by Laravel Sanctum token authentication. Staff routes use a custom `CheckPermission` middleware.
