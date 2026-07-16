@@ -166,7 +166,14 @@ bookit/
 ```
 
 ---
-
 ## Author
 
-**Omid Tavassoli**  [GitHub](https://github.com/omid-tavassoli) · [LinkedIn](https://www.linkedin.com/in/omid-tavassoli-b2758b307) . [portfolio](https//:portfolio.omidtavassoli.dev)
+<div align="center">
+
+**Omid Tavassoli** · informatik Student @ TU Darmstadt
+
+[![GitHub](https://img.shields.io/badge/GitHub-omid--tavassoli-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/omid-tavassoli)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-omid--tavassoli-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/omid-tavassoli-b2758b307)
+[![Portfolio](https://img.shields.io/badge/Portfolio-omidtavassoli.dev-4ade80?style=for-the-badge&logo=safari&logoColor=white)](https://portfolio.omidtavassoli.dev)
+
+</div>
