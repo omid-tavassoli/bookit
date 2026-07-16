@@ -169,6 +169,6 @@ bookit/
 
 ## Author
 
-**Omid Tavassoli** — CS student at TU Darmstadt (5th semester)
+**Omid Tavassoli**
 
 [GitHub](https://github.com/omid-tavassoli) · [LinkedIn](https://www.linkedin.com/in/omid-tavassoli-b2758b307)
