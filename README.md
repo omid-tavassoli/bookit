@@ -16,7 +16,7 @@
 
 ## Live demo
 
-🔗 **[bookit.omidtavassoli.dev](https://bookit.omidtavassoli.dev)** — deployment in progress
+🔗 **[bookit.omidtavassoli.dev](https://bookit.omidtavassoli.dev)**
 
 ---
 
