@@ -169,6 +169,4 @@ bookit/
 
 ## Author
 
-**Omid Tavassoli**
-
-[GitHub](https://github.com/omid-tavassoli) · [LinkedIn](https://www.linkedin.com/in/omid-tavassoli-b2758b307)
+**Omid Tavassoli**  [GitHub](https://github.com/omid-tavassoli) · [LinkedIn](https://www.linkedin.com/in/omid-tavassoli-b2758b307)
